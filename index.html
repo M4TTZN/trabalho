@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeHelper - Assistente Universal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="setup-container" class="card">
+        <h1 class="title">Olá! Vamos personalizar sua experiência.</h1>
+        <p>Responda para que possamos ajustar o site para você:</p>
+        
+        <form id="quiz-form">
+            <div class="question">
+                <label>Como você se identifica?</label>
+                <select id="user-type" required>
+                    <option value="">Selecione...</option>
+                    <option value="idoso">Idoso(a)</option>
+                    <option value="jovem-adulto">Jovem ou Adulto</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label>Você possui alguma dessas condições?</label>
+                <select id="condition" required>
+                    <option value="nenhuma">Nenhuma / Outras</option>
+                    <option value="autismo">Autismo (TEA)</option>
+                    <option value="baixa-visao">Baixa Visão</option>
+                    <option value="ansiedade">Transtorno de Ansiedade / TDAH</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="configurarApp()" class="btn-main">Começar Agora</button>
+        </form>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <header>
+            <h2 id="welcome-msg">Bem-vindo!</h2>
+            <button onclick="location.reload()" class="btn-sm">Refazer Perfil</button>
+        </header>
+
+        <div class="grid-container">
+            <div class="feature-card" id="meds">
+                <img src="https://cdn-icons-png.flaticon.com/512/3022/3022807.png" width="50">
+                <h3>Meus Remédios</h3>
+                <p>Toque para ver seus horários.</p>
+            </div>
+            <div class="feature-card" id="sos">
+                <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" width="50">
+                <h3>BOTÃO DE EMERGÊNCIA</h3>
+            </div>
+            <div class="feature-card" id="routine">
+                <h3>Minha Rotina</h3>
+                <p id="routine-desc">Atividades do dia.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
